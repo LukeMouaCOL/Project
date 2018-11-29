@@ -12,11 +12,6 @@ public class Driver {
 		String pNumber;
 		String name;
 		String address;
-		//variables for Billing class
-		double visit = 0;
-		double pricePerscription = 0;
-		int hours = 0;
-		double payPerHour = 0;
 		
 		Scanner kb = new Scanner(System.in);
 		
@@ -38,17 +33,17 @@ public class Driver {
 		
 		
 		//	public Patient(String name, int age, int DOB, String address, int pNumber)
-		Patient p1 = new Patient(name, age, DOB, address, pNumber);
+		Billing b1 = new Billing(300,150);
+		
+		Patient p1 = new Patient(name, age, DOB, address, pNumber, b1);
 		System.out.println(p1.toString());
 		
 		//	public Billing(double payForVisit, double pricePerscription, int hours, double payPerHour)
 		
-		System.out.println("=====================================");
-		System.out.println("Displaying Billing Info");
-		System.out.println("=====================================");
+//		System.out.println("=====================================");
+//		System.out.println("Displaying Billing Info");
+//		System.out.println("=====================================");
 
-		Billing b1 = new Billing(visit, pricePerscription, hours, payPerHour);
-		System.out.println(b1.toString());
 
 		
 		

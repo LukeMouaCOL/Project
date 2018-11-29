@@ -7,17 +7,23 @@ public class Patient {
 	private String DOB;
 	private String address;
 	private String pNumber;
+	private Billing billing;
 	
-	public Patient(String name, int age, String DOB, String address, String pNumber) {
+	public Patient(String name, int age, String DOB, String address, String pNumber, Billing billing) {
 		this.name = name;
 		this.age = age;
 		this.DOB = DOB;
 		this.address = address;
 		this.pNumber = pNumber;
+		this.billing = billing;
 	}
 	
 	//setters
-	String getName() {
+	public Billing getBilling() {
+		return billing;
+	}
+	
+	public String getName() {
 		return name;
 	}
 	
@@ -38,30 +44,34 @@ public class Patient {
 	}
 	
 	//Setters
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public void setDOB(String DOB) {
-		this.DOB = DOB;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public void setpNumber(String pNumber) {
-		this.pNumber = pNumber;
+	public void setBilling(Billing newBilling) {
+		this.billing = newBilling;
 	}
 	
+	public void setName(String newName) {
+		this.name = newName;
+	}
+
+	public void setAge(int newAge) {
+		this.age = newAge;
+	}
+
+	public void setDOB(String newDOB) {
+		this.DOB = newDOB;
+	}
+
+	public void setAddress(String newAddress) {
+		this.address = newAddress;
+	}
+
+	public void setpNumber(String newPNumber) {
+		this.pNumber = newPNumber;
+	}
 	
+	//toString
 	public String toString() {
 		String Info = "Name: " + name + "\nAge: " + age + "\nDate of Birth: " + DOB + "\nAddress: " 
-				+ address + "\nPhone Number: " + pNumber;
+				+ address + "\nPhone Number: " + pNumber + "\nBilling Info" + billing.toString();
 		return Info;
 	}
 }
