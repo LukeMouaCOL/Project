@@ -1,10 +1,5 @@
 package century.edu.project;
 
-/* 
- * working now for patient class?
- * 11/26/2018 just checking to see if this is working
- */
-
 public class Patient {
 
 	private String name;
