@@ -8,17 +8,23 @@ public class Patient {
 	private String address;
 	private String pNumber;
 	private Billing billing;
+	private Prescription prescription;
 	
-	public Patient(String name, int age, String DOB, String address, String pNumber, Billing billing) {
+	public Patient(String name, int age, String DOB, String address, String pNumber, Billing billing, Prescription prescription) {
 		setName(name);
 		this.age = age;
 		this.DOB = DOB;
 		this.address = address;
 		this.pNumber = pNumber;
 		this.billing = billing;
+		this.prescription = prescription;
 	}
 	
 	//setters
+	public Prescription getPrescription() {
+		return prescription;
+	}
+	
 	public Billing getBilling() {
 		return billing;
 	}
@@ -73,11 +79,15 @@ public class Patient {
 	public void setpNumber(String newPNumber) {
 		this.pNumber = newPNumber;
 	}
+	public void setPrescription(Prescription newPrescription) {
+		this.prescription = newPrescription;
+	}
 	
 	//toString
 	public String toString() {
-		String Info = "\nPERSONAL INFO: " + "Name: " + name + "\nAge: " + age + "\nDate of Birth: " + DOB + "\nAddress: " 
-				+ address + "\nPhone Number: " + pNumber + "\nBILLING INFO: " + billing.toString();
+		String Info = "\nPERSONAL INFO: " + "\nName: " + name + "\nAge: " + age + "\nDate of Birth: " + DOB + "\nAddress: " 
+				+ address + "\nPhone Number: " + pNumber + "\nBILLING INFO: " + billing.toString() + "\nPRESCRIPTION: " + 
+				prescription.toString();
 		return Info;
 	}
 
