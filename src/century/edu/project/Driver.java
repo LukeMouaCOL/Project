@@ -27,22 +27,13 @@ public class Driver {
 		System.out.println("Phone Number: (xxx-xxx-xxxx)");
 		pNumber = kb.nextLine();
 		System.out.println("=====================================");
-		System.out.println("Displaying Personal Info");
+		System.out.println("Displaying Info");
 		System.out.println("=====================================");
 
-		
-		
-		//	public Patient(String name, int age, int DOB, String address, int pNumber)
+		//just hardcoding the two double variables for the Billing, will change later
 		Billing b1 = new Billing(300,150);
-		
 		Patient p1 = new Patient(name, age, DOB, address, pNumber, b1);
 		System.out.println(p1.toString());
-		
-		//	public Billing(double payForVisit, double pricePerscription, int hours, double payPerHour)
-		
-//		System.out.println("=====================================");
-//		System.out.println("Displaying Billing Info");
-//		System.out.println("=====================================");
 
 
 		
