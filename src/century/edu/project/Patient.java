@@ -10,7 +10,7 @@ public class Patient {
 	private Billing billing;
 	
 	public Patient(String name, int age, String DOB, String address, String pNumber, Billing billing) {
-		this.name = name;
+		setName(name);
 		this.age = age;
 		this.DOB = DOB;
 		this.address = address;
@@ -49,7 +49,13 @@ public class Patient {
 	}
 	
 	public void setName(String newName) {
-		this.name = newName;
+		if (newName != null && newName.length() > 0) {
+			this.name = newName;
+			}
+		else {
+			System.out.println("Please enter a name");
+		}
+
 	}
 
 	public void setAge(int newAge) {
@@ -74,4 +80,5 @@ public class Patient {
 				+ address + "\nPhone Number: " + pNumber + "\nBilling Info" + billing.toString();
 		return Info;
 	}
+
 }
