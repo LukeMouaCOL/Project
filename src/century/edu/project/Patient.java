@@ -76,8 +76,8 @@ public class Patient {
 	
 	//toString
 	public String toString() {
-		String Info = "Name: " + name + "\nAge: " + age + "\nDate of Birth: " + DOB + "\nAddress: " 
-				+ address + "\nPhone Number: " + pNumber + "\nBilling Info" + billing.toString();
+		String Info = "\nPERSONAL INFO: " + "Name: " + name + "\nAge: " + age + "\nDate of Birth: " + DOB + "\nAddress: " 
+				+ address + "\nPhone Number: " + pNumber + "\nBILLING INFO: " + billing.toString();
 		return Info;
 	}
 

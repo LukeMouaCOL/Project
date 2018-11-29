@@ -26,7 +26,7 @@ public class Driver {
 		DOB = kb.nextLine();
 		System.out.println("Phone Number: (xxx-xxx-xxxx)");
 		pNumber = kb.nextLine();
-		System.out.println("=====================================");
+		System.out.println("\n=====================================");
 		System.out.println("Displaying Info");
 		System.out.println("=====================================");
 
