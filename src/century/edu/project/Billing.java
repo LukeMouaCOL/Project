@@ -2,11 +2,16 @@ package century.edu.project;
 
 public class Billing {
 	private double payForVisit;
-	private double pricePerscription;
+	private double pricePrescription;
+	
+	public Billing() {
+		this.payForVisit = 300.00;
+		this.pricePrescription = 150;
+	}
 	
 	public Billing(double payForVisit, double pricePerscription) {
 		this.payForVisit = payForVisit;
-		this.pricePerscription = pricePerscription;
+		this.pricePrescription = pricePerscription;
 	}
 	
 	//getters
@@ -15,7 +20,7 @@ public class Billing {
 	}
 
 	public double getPricePerscription() {
-		return pricePerscription;
+		return pricePrescription;
 	}
 	
 	//setters
@@ -24,12 +29,12 @@ public class Billing {
 	}
 
 	public void setPricePerscription(double pricePerscription) {
-		this.pricePerscription = pricePerscription;
+		this.pricePrescription = pricePerscription;
 	}
 	
 	//toString
 	public String toString() {
-		String Info = "\nPay for Visit: $" + payForVisit + "\nPrice for Perscription: $" + pricePerscription;
+		String Info = "\nPay for Visit: $" + payForVisit + "\nPrice for Perscription: $" + pricePrescription;
 		return Info;
 	}
 }
