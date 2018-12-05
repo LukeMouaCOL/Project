@@ -10,17 +10,22 @@ public class Prescription {
 		private int dosage;
 		private int amount;
 		private Date dateFilled;
-		private Date dateExpired;
+		private int price;
 		
-		public Prescription(String name, int dosage, int amount) {
+		public Prescription(String name, int dosage, int amount, int price) {
 			this.rxNumber = genRxNumber();
 			this.name = name;
 			this.dosage = dosage;
 			this.amount = amount;
 			this.dateFilled = new Date();
-			this.dateExpired = genDateExpired();
+			this.price = genPrescriptionPrice();
 		}
 		
+		public Prescription() {
+			
+		}
+		
+		//Generates a random rX number.
 		public long genRxNumber() {
 			int max = 99999999;
 			int min = 10000000;
@@ -29,11 +34,11 @@ public class Prescription {
 			return rxNumber;
 		}
 		
-		public Date genDateExpired() {
-			return dateExpired;
-			//Stub
+		//Initializes the prescription price to $5.
+		public int genPrescriptionPrice() {
+			this.price = 5;
+			return price;
 		}
-		
 		
 		
 		public long getRxNumber() {
@@ -48,6 +53,12 @@ public class Prescription {
 		public int getAmount() {
 			return amount;
 		}
+		public Date getDate() {
+			return dateFilled;
+		}
+		public int getGenPrescriptionPrice() {
+			return price;
+		}
 		
 		public void setRxNumber(int rxNumber) {
 			this.rxNumber = rxNumber;
@@ -61,14 +72,17 @@ public class Prescription {
 		public void setAmount(int amount) {
 			this.amount = amount;
 		}
+		public void setPrice(int price) {
+			this.price = price;
+		}
 		
+		//ToString Override. 
 		public String toString() {
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 			String date1 = sdf.format(dateFilled);
 			
 			String prescriptionInfo = "Rx Number: " + rxNumber + "\nName: " + name + "\nDosage: " + dosage
-			+ " mg" + "\nAmount: " + amount + " pills" + "\nDate Filled: " + date1 + "\nDate Expired: "
-			 + dateExpired;
+			+ " mg" + "\nAmount: " + amount + " pills" + "\nDate Filled: " + date1 + "\nPrice: " + price;
 			return prescriptionInfo;
 		}
 		

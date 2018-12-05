@@ -31,10 +31,10 @@ public class Driver {
 		System.out.println("=======================================");
 
 		//just hardcoding the two double variables for the Billing, will change later
-		Prescription per1 = new Prescription("Allergy Medicine", 20, 20);
-		Billing b1 = new Billing();
-		Patient p1 = new Patient(name, age, DOB, address, pNumber, b1, per1);
-		System.out.println(p1.toString());
+		//Prescription per1 = new Prescription("Allergy Medicine", 20, 20);
+		//Billing b1 = new Billing();
+		//Patient p1 = new Patient(name, age, DOB, address, pNumber, b1, per1);
+		//System.out.println(p1.toString());
 		
 		System.out.println("\n=====================================");
 		System.out.println("Displaying Doctor Info");
