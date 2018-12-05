@@ -5,6 +5,7 @@ public class Billing {
 	private double pricePrescription;
 	private double price;
 	private double fullBill;
+	private Prescription prescription;
 	
 	Prescription per = new Prescription();
 	
@@ -27,6 +28,9 @@ public class Billing {
 	
 	
 	//getters
+	public Prescription getPrescription() {
+		return prescription;
+	}
 	public double getPayForVisit() {
 		return payForVisit;
 	}
@@ -36,6 +40,10 @@ public class Billing {
 	}
 	
 	//setters
+	public void setPrescription(Prescription prescription) {
+		this.prescription = prescription;
+	}
+	
 	public void setPayForVisit(double payForVisit) {
 		this.payForVisit = payForVisit;
 	}

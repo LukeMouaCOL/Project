@@ -7,9 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-import edu.century.pa4.Passenger;
-import edu.century.pa4.BookingGUI.AddBtnListener;
-
 public class HospitalGUI extends JFrame {
 	//Doctor labels
 	private JLabel docFNameLabel = new JLabel("First Name");	
