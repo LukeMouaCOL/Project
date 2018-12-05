@@ -7,7 +7,6 @@ public class Billing {
 	private double fullBill;
 	private Prescription prescription;
 	
-	Prescription per = new Prescription();
 	
 	public Billing(double payForVisit, double pricePerscription) {
 		this.payForVisit = payForVisit;
@@ -22,7 +21,7 @@ public class Billing {
 	}
 	
 	public double fullBillPrice() {
-		this.fullBill = payPrice() + per.genPrescriptionPrice();
+		this.fullBill = payPrice() + prescription.getGenPrescriptionPrice();
 		return fullBill;
 	}
 	
