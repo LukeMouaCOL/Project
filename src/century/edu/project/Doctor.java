@@ -2,22 +2,27 @@ package century.edu.project;
 
 public class Doctor {
 	
-	private String name;
+	private String fName;
+	private String lName;
 	private int yearsExperience;
 	private int age;
 	private String department;
 	private String phoneNumber;
 	
-	public Doctor(String name, int yearsExperience, int age, String department, String phoneNumber) {
-		this.name = name;
+	public Doctor(String fName, String lName, int yearsExperience, int age, String department, String phoneNumber) {
+		this.fName = fName;
+		this.lName = lName;
 		this.yearsExperience = yearsExperience;
 		this.age = age;
 		this.department = department;
 		this.phoneNumber = phoneNumber;
 	}
 	
-	public String getName() {
-		return this.name;
+	public String getFName() {
+		return this.fName;
+	}
+	public String getLName() {
+		return this.lName;
 	}
 	public int getYearsExperience() {
 		return this.yearsExperience;
@@ -32,8 +37,11 @@ public class Doctor {
 		return this.phoneNumber;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setFName(String Fname) {
+		this.fName = Fname;
+	}
+	public void setLName(String LName) {
+		this.lName = LName;
 	}
 	public void setYearsExperience(int yearsExperience) {
 		this.yearsExperience = yearsExperience;
@@ -49,7 +57,7 @@ public class Doctor {
 	}
 	
 	public String toString() {
-		String DoctorInfo = "Name: " + name + "\nYears of Experience: " + yearsExperience + "\nAge: " + age
+		String DoctorInfo = "First Name: " + fName +"Last Name: " + lName + "\nYears of Experience: " + yearsExperience + "\nAge: " + age
 		+ "\nDepartment: " + department + "\nPhone Number: " + phoneNumber;	
 		return DoctorInfo;
 		

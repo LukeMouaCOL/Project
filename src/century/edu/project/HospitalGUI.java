@@ -1,11 +1,13 @@
-package century.edu.project;
-
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+
+
+
+
 
 public class HospitalGUI extends JFrame {
 	//Doctor labels
@@ -55,18 +57,23 @@ public class HospitalGUI extends JFrame {
 	private JButton addBtn6 = new JButton("Clear Patients");
 	
 	//Doctor panels
-	private JPanel docTopPanel = new JPanel(new GridLayout(3, 2));
+	private JPanel docTopPanel = new JPanel(new GridLayout(2, 3));
 	private JPanel docMiddlePanel = new JPanel(new FlowLayout());
 	private JPanel docBottomPanel = new JPanel(new BorderLayout());
 	
 	//Patient panels
-	private JPanel pacTopPanel = new JPanel(new GridLayout(3, 2));
+	private JPanel pacTopPanel = new JPanel(new GridLayout(2, 3));
 	private JPanel pacMiddlePanel = new JPanel(new FlowLayout());
 	private JPanel pacBottomPanel = new JPanel(new BorderLayout());
 	
-	//Objects to give GUI access
-	Doctor doctor = new Doctor();
-	Patient patient = new Patient();
+	//Arrays of Doctor and Patient
+	private Doctor[] doctor = new Doctor[100];
+	private int count1;
+	private Patient[] patient = new Patient[100];
+	private int count2;
+	
+	
+	
 	
 	//Event listeners
 	private class AddBtnListener implements ActionListener {
@@ -74,20 +81,50 @@ public class HospitalGUI extends JFrame {
 		String callingBtn = e.getActionCommand();
 		
 		if (callingBtn.equals("List Doctors")) {
+			String allDoctors = "";
+			
+			for(int i = 0; i < count1; i++) {
+				allDoctors += doctor[i].toString() + "\n";
+			}
 			docConsoleTextField.append(doctor.toString() + "\n");
+		
 		} else if (callingBtn.equals("Add Doctor")) {
 			String fName = docFNameTextField.getText();
-			String lName = docLNameTextField.getText();
-			String yearsExperience = experienceTextField.getText(); //Must parse *******************************************
-			String age = docAgeTextField.getText(); //Must parse ***********************************************************
+			String lName = docLNameTextField.getText(); 
+			int yearsExperience = Integer.parseInt(experienceTextField.getText());
+			int age = Integer.parseInt(docAgeTextField.getText());
 			String department = departmentTextField.getText();
 			String phoneNumber = docPhoneTextField.getText();
+			
+			Doctor doc = new Doctor(fName, lName, yearsExperience, age, department, phoneNumber);
+			doctor[count1] = doc;
+			count1++;
+			
 			docConsoleTextField.append(fName + " has been added!\n");
+		
 		} else if (callingBtn.equals("Clear Doctors")) {
 			docConsoleTextField.setText("");
 		} else if (callingBtn.equals("List Patients")) {
+			String allPatients = "";
+			
+			for(int i = 0; i < count2; i++) {
+				allPatients += patient[i].toString() + "\n";
+			}
 			pacConsoleTextField.append(patient.toString() + "\n");
+			
 		} else if (callingBtn.equals("Add Patient")) {
+			String name = pacNameTextField.getText();
+			int age = Integer.parseInt(pacAgeTextField.getText());
+			String DOB = DOBTextField.getText();
+			String address = addressTextField.getText();
+			String pNumber = pacPhoneTextField.getText();
+			String name1 = presNameTextField.getText();
+			
+			Patient pat = new Patient(name, age, DOB, address, pNumber, billing, prescription);
+			patient[count2] = pat;
+			count2++;
+			
+			pacConsoleTextField.append(name + " has been added!\n");
 			
 		}else if (callingBtn.equals("Clear Patients")) {
 			pacConsoleTextField.setText("");
@@ -185,8 +222,14 @@ public class HospitalGUI extends JFrame {
 		pacBottomPanel.add(txtAreaView, BorderLayout.CENTER);
 	}
 
+	public static void main(String[] args) {
+		HospitalGUI frame = new HospitalGUI("Hospital Management");
+		frame.setVisible(true);
+		
+	}
 
 
 
 }
+
 
