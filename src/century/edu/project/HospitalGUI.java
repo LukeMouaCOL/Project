@@ -82,7 +82,8 @@ public class HospitalGUI extends JFrame {
 	public void actionPerformed(ActionEvent e) {
 		String callingBtn = e.getActionCommand();
 		Billing billing = new Billing();
-		Prescription prescription = new Prescription();
+		//before was Prescription = new Prescription(), the deafult no arg constructor
+		Prescription prescription = new Prescription(presNameTextField.getText(), 100, 100, 5);
 		
 		if (callingBtn.equals("List Doctors")) {
 			String allDoctors = "";

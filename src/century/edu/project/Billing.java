@@ -8,7 +8,8 @@ public class Billing {
 	private Prescription prescription;
 	
 	public Billing() {
-		
+		this.payForVisit = 20;
+		this.pricePrescription = 100;
 	}
 	public Billing(double payForVisit, double pricePerscription) {
 		this.payForVisit = payForVisit;

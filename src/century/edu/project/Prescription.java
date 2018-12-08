@@ -22,10 +22,10 @@ public class Prescription {
 		}
 		
 		public Prescription() {
-			this.rxNumber = 0;
+			this.rxNumber = genRxNumber();
 			this.name = "";
-			this.dosage = 0;
-			this.amount = 0;
+			this.dosage = 100;
+			this.amount = 100;
 			this.dateFilled = new Date();
 			this.price = genPrescriptionPrice();
 		}
