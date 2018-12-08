@@ -22,7 +22,12 @@ public class Prescription {
 		}
 		
 		public Prescription() {
-			
+			this.rxNumber = 0;
+			this.name = "";
+			this.dosage = 0;
+			this.amount = 0;
+			this.dateFilled = new Date();
+			this.price = genPrescriptionPrice();
 		}
 		
 		//Generates a random rX number.

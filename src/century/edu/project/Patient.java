@@ -86,8 +86,11 @@ public class Patient {
 	//toString
 	public String toString() {
 		String Info = "\nPERSONAL INFO: " + "\nName: " + name + "\nAge: " + age + "\nDate of Birth: " + DOB + "\nAddress: " 
-				+ address + "\nPhone Number: " + pNumber + "\nBILLING INFO: " + billing.toString() + "\nPRESCRIPTION: " + 
+				+ address + "\nPhone Number: " + pNumber + "\nBILLING INFO: " + billing.toString() + "\nPRESCRIPTION: ";
+		if(prescription != null) {
 				prescription.toString();
+				Info += prescription.toString();
+		}
 		return Info;
 	}
 

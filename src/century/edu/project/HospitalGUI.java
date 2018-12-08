@@ -90,7 +90,7 @@ public class HospitalGUI extends JFrame {
 			for(int i = 0; i < count1; i++) {
 				allDoctors += doctor[i].toString() + "\n";
 			}
-			docConsoleTextField.append(doctor.toString() + "\n");
+			docConsoleTextField.append(allDoctors + "\n");
 		
 		} else if (callingBtn.equals("Add Doctor")) {
 			String fName = docFNameTextField.getText();
@@ -115,7 +115,7 @@ public class HospitalGUI extends JFrame {
 			for(int i = 0; i < count2; i++) {
 				allPatients += patient[i].toString() + "\n";
 			}
-			pacConsoleTextField.append(patient.toString() + "\n");
+			pacConsoleTextField.append(allPatients + "\n");
 			
 		} else if (callingBtn.equals("Add Patient")) {
 			String name = pacNameTextField.getText();
