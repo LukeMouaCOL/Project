@@ -1,3 +1,5 @@
+package century.edu.project;
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -79,6 +81,8 @@ public class HospitalGUI extends JFrame {
 	private class AddBtnListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		String callingBtn = e.getActionCommand();
+		Billing billing = new Billing();
+		Prescription prescription = new Prescription();
 		
 		if (callingBtn.equals("List Doctors")) {
 			String allDoctors = "";
@@ -96,6 +100,7 @@ public class HospitalGUI extends JFrame {
 			String department = departmentTextField.getText();
 			String phoneNumber = docPhoneTextField.getText();
 			
+			//string int int string string
 			Doctor doc = new Doctor(fName, lName, yearsExperience, age, department, phoneNumber);
 			doctor[count1] = doc;
 			count1++;

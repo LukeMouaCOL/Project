@@ -7,7 +7,9 @@ public class Billing {
 	private double fullBill;
 	private Prescription prescription;
 	
-	
+	public Billing() {
+		
+	}
 	public Billing(double payForVisit, double pricePerscription) {
 		this.payForVisit = payForVisit;
 		this.pricePrescription = pricePerscription;

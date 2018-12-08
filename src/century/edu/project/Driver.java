@@ -39,8 +39,8 @@ public class Driver {
 		System.out.println("\n=====================================");
 		System.out.println("Displaying Doctor Info");
 		System.out.println("=======================================");
-		Doctor d1 = new Doctor("George Lopez", 20, 45, "That good department", "690-720-8581");
-		System.out.println(d1.toString());
+		//Doctor d1 = new Doctor("George Lopez", 20, 45, "That good department", "690-720-8581");
+		//System.out.println(d1.toString());
 		
 		
 		kb.close();
