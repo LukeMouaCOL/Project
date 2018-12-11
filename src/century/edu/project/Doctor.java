@@ -57,10 +57,12 @@ public class Doctor {
 	}
 	
 	public String toString() {
-		String DoctorInfo = "First Name: " + fName +"Last Name: " + lName + "\nYears of Experience: " + yearsExperience + "\nAge: " + age
-		+ "\nDepartment: " + department + "\nPhone Number: " + phoneNumber;	
+		String DoctorInfo = "First Name: " + fName + "\nLast Name: " + lName + "\nYears at Hospital: " + yearsExperience + "\nAge: " + age
+		+ "\nDepartment: " + department + "\nPhone Number: " + phoneNumber +
+		"\n*******************************************\n";
 		return DoctorInfo;
 		
 	}
+
 
 }

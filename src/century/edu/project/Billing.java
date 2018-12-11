@@ -3,28 +3,26 @@ package century.edu.project;
 public class Billing {
 	private double payForVisit;
 	private double pricePrescription;
-	private double price;
 	private double fullBill;
 	private Prescription prescription;
 	
 	public Billing() {
 		this.payForVisit = 20;
 		this.pricePrescription = 100;
+		fullBillPrice();
 	}
+	
 	public Billing(double payForVisit, double pricePerscription) {
 		this.payForVisit = payForVisit;
 		this.pricePrescription = pricePerscription;
+		fullBillPrice();
 	}
 	
 	//total billing (prescription + visit price)
 	//pay for visit
-	public double payPrice() {
-		this.price = 20;
-		return price;
-	}
 	
 	public double fullBillPrice() {
-		this.fullBill = payPrice() + prescription.getGenPrescriptionPrice();
+		this.fullBill = payForVisit + pricePrescription + 5;
 		return fullBill;
 	}
 	
@@ -33,6 +31,7 @@ public class Billing {
 	public Prescription getPrescription() {
 		return prescription;
 	}
+
 	public double getPayForVisit() {
 		return payForVisit;
 	}
@@ -56,7 +55,12 @@ public class Billing {
 	
 	//toString
 	public String toString() {
-		String Info = "\nPay for Visit: $" + payForVisit + "\nPrice for Perscription: $" + pricePrescription + "Full Bill: " + fullBill;
+		String Info = "\nPay for Visit: $" + payForVisit + "\nPrice for Perscription: $" + pricePrescription +"\nFull Bill: " + fullBill;
 		return Info;
+	}
+	
+	public static void main(String[] args) {
+		Billing b1 = new Billing();
+		System.out.println(b1.toString());
 	}
 }

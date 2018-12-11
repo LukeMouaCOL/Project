@@ -24,7 +24,7 @@ public class HospitalGUI extends JFrame {
 	private JLabel pacNameLabel = new JLabel("Full Name");	
 	private JLabel pacAgeLabel = new JLabel("Age");	
 	private JLabel DOBLabel = new JLabel("Birth Date");	
-	private JLabel addressLabel = new JLabel("First Name");	
+	private JLabel addressLabel = new JLabel("Address");	
 	private JLabel pacPhoneLabel = new JLabel("Phone Number");	
 	private JLabel presNameLabel = new JLabel("Prescription Name");	
 	
@@ -82,8 +82,7 @@ public class HospitalGUI extends JFrame {
 	public void actionPerformed(ActionEvent e) {
 		String callingBtn = e.getActionCommand();
 		Billing billing = new Billing();
-		//before was Prescription = new Prescription(), the deafult no arg constructor
-		Prescription prescription = new Prescription(presNameTextField.getText(), 100, 100, 5);
+		Prescription prescription = new Prescription();
 		
 		if (callingBtn.equals("List Doctors")) {
 			String allDoctors = "";
@@ -234,8 +233,14 @@ public class HospitalGUI extends JFrame {
 		
 	}
 
-
-
 }
+
+
+
+
+
+
+
+
 
 

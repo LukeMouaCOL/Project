@@ -86,8 +86,9 @@ public class Prescription {
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 			String date1 = sdf.format(dateFilled);
 			
-			String prescriptionInfo = "Rx Number: " + rxNumber + "\nName: " + name + "\nDosage: " + dosage
-			+ " mg" + "\nAmount: " + amount + " pills" + "\nDate Filled: " + date1 + "\nPrice: " + price;
+			String prescriptionInfo = "\nRx Number: " + rxNumber + "\nName: " + name + "\nDosage: " + dosage
+			+ " mg" + "\nAmount: " + amount + " pills" + "\nDate Filled: " + date1 + "\nPrice: " + price
+			+ " $" + "\n*******************************************\n";
 			return prescriptionInfo;
 		}
 		
