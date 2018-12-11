@@ -1,5 +1,4 @@
 package century.edu.project;
-
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -24,7 +23,7 @@ public class HospitalGUI extends JFrame {
 	private JLabel pacNameLabel = new JLabel("Full Name");	
 	private JLabel pacAgeLabel = new JLabel("Age");	
 	private JLabel DOBLabel = new JLabel("Birth Date");	
-	private JLabel addressLabel = new JLabel("Address");	
+	private JLabel addressLabel = new JLabel("Address");	// address + billing no arg constructor
 	private JLabel pacPhoneLabel = new JLabel("Phone Number");	
 	private JLabel presNameLabel = new JLabel("Prescription Name");	
 	
@@ -82,7 +81,8 @@ public class HospitalGUI extends JFrame {
 	public void actionPerformed(ActionEvent e) {
 		String callingBtn = e.getActionCommand();
 		Billing billing = new Billing();
-		Prescription prescription = new Prescription();
+		//before was Prescription = new Prescription(), the deafult no arg constructor
+		Prescription prescription = new Prescription(presNameTextField.getText(), 100, 100, 5);
 		
 		if (callingBtn.equals("List Doctors")) {
 			String allDoctors = "";
@@ -233,14 +233,7 @@ public class HospitalGUI extends JFrame {
 		
 	}
 
+
+
 }
-
-
-
-
-
-
-
-
-
 
